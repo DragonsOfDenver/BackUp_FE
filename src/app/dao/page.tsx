@@ -59,15 +59,15 @@ function DAOPage() {
                             onChange={(e) => setEndBlock(e.target.value)}
                             placeholder="End Block"
                         />
-                        <button onClick={() => createProposal()}>Create Proposal</button>
+                        {/* <button onClick={() => createProposal()}>Create Proposal</button> */}
                     </div>
                     <div>
                         {proposals.map((proposal, index) => (
                             <div key={index}>
-                                <h2>{proposal.title}</h2>
+                                {/* <h2>{proposal.title}</h2>
                                 <p>{proposal.description}</p>
                                 <button onClick={() => voteOnProposal(proposal.id, 1)}>Vote For</button>
-                                <button onClick={() => voteOnProposal(proposal.id, 0)}>Vote Against</button>
+                                <button onClick={() => voteOnProposal(proposal.id, 0)}>Vote Against</button> */}
                             </div>
                         ))}
                     </div>
