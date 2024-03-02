@@ -5,15 +5,15 @@ import ViceCasinoDaoABI from "./abis/ViceCasinoDAO.json";
 
 export const contractConfig = {
     CopeToken: {
-        address: "0x0fB06E24561Cd0477666a6c317641de69d27489B" as `0x${string}`,
+        address: "0xfaBe30C7DDe28e7E55993A64160e7cac23653Dd9" as `0x${string}`,
         abi: CopeTokenABI.abi
     },
     SlotsGame: {
-        address: '0xf9CA920eBE7BA15DB6F69eeab56f86F7Bc506b6a' as `0x${string}`,
+        address: '0x9F2590aDE279e711365280224241B1f3aD3A9aEf' as `0x${string}`,
         abi: SlotsAtViceCasinoABI.abi
     },
     ViceCasinoDao: {
-        address: "0xbe8f03f5D982134f678d839beB0BA0Fe9409B427" as `0x${string}`,
+        address: "0x88432c67e99Ff91128127057C9405ecbC5D75909" as `0x${string}`,
         abi: ViceCasinoDaoABI.abi
     }
 }
