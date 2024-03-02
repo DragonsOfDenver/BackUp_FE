@@ -105,3 +105,81 @@ a {
     color-scheme: dark;
   }
 }
+
+/* animation layers */
+.spinAnim, .lostAnim, .wonAnim
+{
+  width: 100%;
+  display: block;
+  position: absolute;
+  height: 100vh;
+}
+
+.spinAnim { 
+  background-color: #ffffff;
+  background-image: url(/spinning.png);
+  background-size: contain;
+  border-radius: 50%;
+}
+.lostAnim { 
+  background-color: #ffffff;
+  background-image: url(/spinning.png);
+  background-position: center 15em;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.wonAnim {     
+  background-color: #ffffff;
+  background-image: url(/confetti-holiday-cheer.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wonAnim h2
+{ width: 100%;
+padding: 30px;
+}
+
+.menu{
+  padding: 50px;
+  margin-top: 40px;
+  z-index: 10;
+}
+
+.spinAnim {
+  position: absolute;
+  top: 40%;
+  width: 1000px;
+  height: 1000px;
+  -webkit-animation:spin .4s linear infinite;
+  -moz-animation:spin .4s linear infinite;
+  animation:spin .4s linear infinite;
+}
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
+
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}

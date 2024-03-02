@@ -21,6 +21,8 @@ const SlotsGame = () => {
     const [spinWinOrLose, setSpinWinOrLose] = useState(false); // ['win', 'lose']
     const [slotsResults, setSlotsResults] = useState(defaultSpin);
     const [spinning, setSpinning] = useState(false);
+    const [hasSpun, setHasSpun] = useState(false);
+
 
     const {writeContract} = useWriteContract();
     
@@ -46,11 +48,13 @@ const SlotsGame = () => {
                     value: parseEther('0.0001'),
                 })
             setSpinning(true);
+            setHasSpun(true);
         }
     };
 
     return (
-        <div>
+        <>
+        <div className="menu">
             {!isConnected ? (
                 <span>Please connect your wallet</span>
             ) : (
@@ -59,14 +63,9 @@ const SlotsGame = () => {
                         The Vice Casino
                     </h1>
                     <button onClick={handleSpin} disabled={spinning} className={styles.spinButton}>
-                        {spinning ? 'Spinning...' : 'Spin'}
+                        {!hasSpun ? 'Spin Me' : spinning ? 'Spinning!' : 'Feeling Lucky? Spin Again'}
                     </button>
 
-                    {spinning && (
-                        <p>Spinning...</p>   
-                    )}
-
-                    <p>{spinWinOrLose ? 'Congratulations, you win!' : 'You lost'}</p>
                     <div className={styles.slotsContainer}>
                         {slotsResults.map((emoji, index) => (
                             <div key={index} className={spinning ? styles.spinAnimation : styles.slot}>
@@ -77,6 +76,24 @@ const SlotsGame = () => {
                 </div>
             )}
         </div>
+        
+        {spinWinOrLose ? (
+            <div className="wonAnim">
+                <h2>Congratulations, you won the Jackpot!</h2>
+            </div>
+        ):(
+            <div className="lostAnim">
+
+            </div>
+        )}
+
+        {spinning && (
+            <div className="spinAnim">
+
+            </div>
+        )}
+      </>
+        
     );
 }
 
