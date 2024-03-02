@@ -5,6 +5,7 @@ import { useAccount, useBalance, useReadContract } from "wagmi";
 import { contractConfig } from "@/contracts";
 import { formatEther } from "viem";
 import '@fontsource/press-start-2p';
+import Link from "next/link";
 
 enum HeaderState {
     LoggedOut,
@@ -69,7 +70,16 @@ function Header() {
                     {/* <p>Balance: {Number(balanceResult.data?.formatted).toFixed(4)} {balanceResult.data?.symbol}</p> */}
                 </div>
             )}  
-            
+            <div className={styles.menu}>
+                <Link href="/">
+                    <p>Slots</p>
+                </Link>
+
+                <Link href="/dao">
+                    <p>DAO</p>
+                </Link>
+            </div>
+
             <w3m-button />
         </header>
     )

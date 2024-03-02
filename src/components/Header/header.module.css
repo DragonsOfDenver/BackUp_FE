@@ -46,3 +46,12 @@
     font-family: 'Press Start 2P', system-ui;
     font-size: 0.7rem;
 }
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 20px 20px 20px;
+}
