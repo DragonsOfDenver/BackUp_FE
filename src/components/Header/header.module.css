@@ -1,10 +1,17 @@
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 20rem;
     width: 100%;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Press Start 2P', system-ui;
 }
 
 .loggedIn {
@@ -17,11 +24,14 @@
 .balanceBlock {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
     border: 1px solid #000;
     padding: 0.5rem;
-    border-radius: 5px;
-    background-color: #7e7e7e;
-    min-width: 100px;
+    border-left: #808080 2px solid;
+    min-width: 142px;
+    min-height: 100px;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 0.7rem;
 }

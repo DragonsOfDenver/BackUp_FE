@@ -49,22 +49,24 @@ const SlotsGame = () => {
         }
     };
 
-
-    console.log("Results:", slotsResults);
-    console.log("Win or Lose:", spinWinOrLose);
-    console.log("Spinning:", spinning);
-
     return (
         <div>
             {!isConnected ? (
                 <span>Please connect your wallet</span>
             ) : (
-                <div>
-                    <h1>Welcome to the Slots Game!</h1>
-                    <button onClick={handleSpin} disabled={spinning}>
+                <div className={styles.slotsGame}>
+                    <h1 className={styles.slotsTitle}>
+                        The Vice Casino
+                    </h1>
+                    <button onClick={handleSpin} disabled={spinning} className={styles.spinButton}>
                         {spinning ? 'Spinning...' : 'Spin'}
                     </button>
-                    <p>{spinWinOrLose ? 'Congratulations, you win!' : 'Try again!'}</p>
+
+                    {spinning && (
+                        <p>Spinning...</p>   
+                    )}
+
+                    <p>{spinWinOrLose ? 'Congratulations, you win!' : 'You lost'}</p>
                     <div className={styles.slotsContainer}>
                         {slotsResults.map((emoji, index) => (
                             <div key={index} className={spinning ? styles.spinAnimation : styles.slot}>

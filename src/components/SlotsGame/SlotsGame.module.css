@@ -23,3 +23,31 @@
     animation: spin 2s ease-in-out;
   }
   
+.slotsGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.spinButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'Press Start 2P', system-ui;
+  min-width: 175px;
+  min-height: 50px;
+  font-weight: bold;
+  background-color: #c7c7c7;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slotsTitle {
+  font-size: 1.5rem;
+  font-family: 'Press Start 2P', system-ui;
+  font-weight: bold;
+  text-align: center;
+}

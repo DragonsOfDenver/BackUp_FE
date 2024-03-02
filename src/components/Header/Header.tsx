@@ -4,6 +4,7 @@ import styles from "./header.module.css";
 import { useAccount, useBalance, useReadContract } from "wagmi";
 import { contractConfig } from "@/contracts";
 import { formatEther } from "viem";
+import '@fontsource/press-start-2p';
 
 enum HeaderState {
     LoggedOut,
@@ -23,7 +24,13 @@ function Header() {
         functionName: 'balanceOf',
         args: [account.address],
     }) as any;    
+
+    const slotsContractBalance = useBalance({
+        address: contractConfig.SlotsGame.address,
+    });
+
     
+
     React.useEffect(() => {
         if (account.address) {
             setState(HeaderState.LoggedIn);
@@ -36,7 +43,7 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <h1 className={styles.title}>Header</h1>
+            <h1 className={styles.title}>Vice Roll Casino </h1>
 
             {state === HeaderState.LoggedIn && (
                 <div className={styles.loggedIn}>
@@ -49,6 +56,13 @@ function Header() {
                         <p>Cope</p>
                         <span>
                             {formatEther(CopeBal?.data || 0)}
+                        </span>
+                    </div>
+
+                    <div className={styles.balanceBlock}>
+                        <p>Slots Balance</p>
+                        <span>
+                            {Number(slotsContractBalance.data?.formatted).toFixed(4)} {slotsContractBalance.data?.symbol}
                         </span>
                     </div>
 
