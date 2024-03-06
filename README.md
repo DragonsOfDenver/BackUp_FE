@@ -35,7 +35,7 @@
 
 - 🌱 Next steps for us: Expand our players reward infrastructure (more contrats, more games, more vices => virtures)
 
-- ⚡ Fun fact **3 of us are brand new to eth denver, and we are from 3 differnt countries**
+- ⚡ Fun fact **3 of us are brand new to eth denver, and we are from 3 different countries**
 
 <h3 align="left">Connect with us:</h3>
 <p align="left">
